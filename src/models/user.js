@@ -47,5 +47,13 @@ export default {
         },
       };
     },
+    upImg(state, action) {
+      let currentUser = { ...state.currentUser }
+      currentUser.avatar = action.payload;
+      return {
+        ...state,
+        currentUser
+      };
+    },
   },
 };
